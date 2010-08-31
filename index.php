@@ -5,7 +5,7 @@
   $query = "SELECT offer_ads.id, offer_ads.room_types, ad_gmaps_locations.lat, ad_gmaps_locations.lng ".
            "FROM offer_ads, ad_gmaps_locations ".
            "WHERE offer_ads.id = ad_gmaps_locations.offer_ad_id ".
-  	       "LIMIT 10";
+  	       "ORDER BY id DESC LIMIT 10";
   	       
   $result = mysql_query($query) or die(mysql_error());
   
@@ -16,7 +16,6 @@
            "lat:{$row['lat']} " .
            "lng:{$row['lng']} <br />";
   } 
-  
 
   include 'closedb.php';
 ?>
