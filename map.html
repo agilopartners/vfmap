@@ -1,0 +1,16 @@
+<html>
+<head>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="script.js"></script>
+</head>
+<body onload="init()">
+<form>
+Lähtöpaikka: <input type="edit" id="origin" />
+Kohdepaikka: <input type="edit" id="destination" />
+<input type="button" value="Siirry kohdepaikkaan" onclick="test()" />
+<input type="button" value="Optimoi reitti" onclick="calcRoute()" />
+</form>
+<div id="instructions" />
+<div id="map" style="width: 100%; height: 80%;" />
+</body>
+</html>
